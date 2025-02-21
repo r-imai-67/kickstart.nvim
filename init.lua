@@ -838,6 +838,7 @@ require('lazy').setup({
     end,
   },
 
+  --[[
   { -- You can easily change to a different colorscheme.
     -- Change the name of the colorscheme plugin below, and then
     -- change the command in the config to whatever the name of that colorscheme is.
@@ -853,6 +854,21 @@ require('lazy').setup({
 
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'
+    end,
+  },
+  --]]
+
+  {
+    'maxmx03/solarized.nvim',
+    lazy = false,
+    priority = 999,
+    ---@type solarized.config
+    opts = {},
+    config = function(_, opts)
+      vim.o.termguicolors = true
+      vim.o.background = 'light'
+      require('solarized').setup(opts)
+      vim.cmd.colorscheme 'solarized'
     end,
   },
 
