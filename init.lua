@@ -923,6 +923,8 @@ require('lazy').setup({
   },
 
   {
+    -- If the installation fails, run `:Lazy load markdown-preview.nvim` followed by `:Lazy build markdown-preview.nvim`
+    -- See: https://github.com/iamcco/markdown-preview.nvim/issues/690#issuecomment-2425301834
     'iamcco/markdown-preview.nvim',
     cmd = { 'MarkdownPreviewToggle', 'MarkdownPreview', 'MarkdownPreviewStop' },
     ft = { 'markdown' },
