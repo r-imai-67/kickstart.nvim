@@ -988,7 +988,7 @@ require('lazy').setup({
       -- fill any relevant options here
     },
     config = function()
-      vim.keymap.set('n', '<leader>@', '<cmd>Neotree<CR>', { desc = 'Neotree' })
+      vim.keymap.set('n', '\\', '<cmd>Neotree<CR>', { desc = 'Neotree' })
     end,
   },
   -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
